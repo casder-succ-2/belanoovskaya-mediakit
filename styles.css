@@ -614,6 +614,6 @@ footer h2 {
 .case-card:nth-child(4n + 2) .case-body b,
 .case-card:nth-child(4n + 3) .case-body b,
 .case-card:nth-child(4n + 4) .case-body b {
-  margin-top:auto;
+  margin-top:16px;
   background:var(--red);
 }
