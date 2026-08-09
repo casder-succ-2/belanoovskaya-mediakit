@@ -637,3 +637,27 @@ footer h2 {
 @media (max-width:620px) {
   .case-body { min-height:0; }
 }
+
+/* revision-26: equal cards per grid row without auto margins */
+.case-grid {
+  align-items:stretch;
+}
+.case-card {
+  height:100%;
+  align-self:stretch;
+}
+.case-body {
+  display:grid;
+  grid-template-rows:auto auto 1fr auto;
+  flex:1;
+  height:100%;
+  min-height:0;
+}
+.case-body b,
+.case-card:nth-child(4n + 2) .case-body b,
+.case-card:nth-child(4n + 3) .case-body b,
+.case-card:nth-child(4n + 4) .case-body b {
+  align-self:end;
+  justify-self:start;
+  margin-top:16px;
+}
