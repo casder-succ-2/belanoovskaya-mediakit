@@ -604,3 +604,16 @@ footer h2 {
   .case-grid { grid-template-columns:1fr; }
   .case-body { min-height:0; }
 }
+
+/* revision-24: aligned case actions */
+.case-body {
+  flex:1;
+  height:100%;
+}
+.case-body b,
+.case-card:nth-child(4n + 2) .case-body b,
+.case-card:nth-child(4n + 3) .case-body b,
+.case-card:nth-child(4n + 4) .case-body b {
+  margin-top:auto;
+  background:var(--red);
+}
