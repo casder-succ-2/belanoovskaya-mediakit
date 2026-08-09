@@ -505,3 +505,159 @@ footer h2 {
   .hero-visual { width:100%; height:min(54vh,540px); }
   .hero-visual img { transform:none; }
 }
+
+/* revision-23: compact case cards */
+.hero h1 {
+  line-height:1.2;
+  margin-block:28px;
+}
+.manifesto h2,
+.section-heading h2,
+footer h2 {
+  line-height:1.24;
+}
+.case-grid {
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+.case-card {
+  display:flex;
+  min-width:0;
+  flex-direction:column;
+}
+.case-image {
+  flex:none;
+  aspect-ratio:1/1;
+}
+.case-body {
+  min-height:220px;
+  padding:14px;
+}
+.case-body > p:first-child {
+  color:var(--red);
+  font-size:9px;
+  font-weight:800;
+  line-height:1.25;
+}
+.case-body h3 {
+  margin:10px 0;
+  font-size:clamp(22px,2.4vw,34px);
+  line-height:1.04;
+}
+.case-body .case-task {
+  display:-webkit-box;
+  overflow:hidden;
+  margin:0;
+  font-size:11px;
+  line-height:1.4;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4;
+}
+.case-body b {
+  margin-top:16px;
+  padding:10px 14px;
+  background:var(--red);
+}
+.case-card:nth-child(4n + 2) .case-body b { background:#4d65ff; }
+.case-card:nth-child(4n + 3) .case-body b { background:#14110f; }
+.case-card:nth-child(4n + 4) .case-body b { background:#a44961; }
+.case-card:hover .case-body b,
+.case-card:focus-visible .case-body b { filter:brightness(1.16); }
+
+@media (max-width:900px) {
+  .case-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .case-body { min-height:210px; }
+}
+@media (max-width:620px) {
+  .hero h1 {
+    line-height:1.22;
+    margin-block:22px;
+  }
+  .manifesto h2,
+  .section-heading h2,
+  footer h2 { line-height:1.26; }
+  .case-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+  }
+  .case-body {
+    min-height:205px;
+    padding:11px;
+  }
+  .case-body h3 {
+    font-size:20px;
+    line-height:1.06;
+  }
+  .case-body .case-task {
+    font-size:10px;
+    line-height:1.35;
+    -webkit-line-clamp:4;
+  }
+  .case-body b {
+    margin-top:13px;
+    padding:9px 11px;
+    font-size:9px;
+  }
+}
+@media (max-width:350px) {
+  .case-grid { grid-template-columns:1fr; }
+  .case-body { min-height:0; }
+}
+
+/* revision-24: aligned case actions */
+.case-body {
+  flex:1;
+  height:100%;
+}
+.case-body b,
+.case-card:nth-child(4n + 2) .case-body b,
+.case-card:nth-child(4n + 3) .case-body b,
+.case-card:nth-child(4n + 4) .case-body b {
+  margin-top:16px;
+  background:var(--red);
+}
+
+/* revision-25: cards follow their content height */
+.case-grid {
+  align-items:start;
+}
+.case-card {
+  height:auto;
+  align-self:start;
+}
+.case-body {
+  flex:none;
+  height:auto;
+  min-height:0;
+}
+@media (max-width:900px) {
+  .case-body { min-height:0; }
+}
+@media (max-width:620px) {
+  .case-body { min-height:0; }
+}
+
+/* revision-26: equal cards per grid row without auto margins */
+.case-grid {
+  align-items:stretch;
+}
+.case-card {
+  height:100%;
+  align-self:stretch;
+}
+.case-body {
+  display:grid;
+  grid-template-rows:auto auto 1fr auto;
+  flex:1;
+  height:100%;
+  min-height:0;
+}
+.case-body b,
+.case-card:nth-child(4n + 2) .case-body b,
+.case-card:nth-child(4n + 3) .case-body b,
+.case-card:nth-child(4n + 4) .case-body b {
+  align-self:end;
+  justify-self:start;
+  margin-top:16px;
+}
