@@ -617,3 +617,23 @@ footer h2 {
   margin-top:16px;
   background:var(--red);
 }
+
+/* revision-25: cards follow their content height */
+.case-grid {
+  align-items:start;
+}
+.case-card {
+  height:auto;
+  align-self:start;
+}
+.case-body {
+  flex:none;
+  height:auto;
+  min-height:0;
+}
+@media (max-width:900px) {
+  .case-body { min-height:0; }
+}
+@media (max-width:620px) {
+  .case-body { min-height:0; }
+}
