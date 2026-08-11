@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root { --ink:#14110f; --paper:#f1ecdf; --red:#66001a; --blue:#4d65ff; --line:rgba(20,17,15,.22); }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -660,4 +658,128 @@ footer h2 {
   align-self:end;
   justify-self:start;
   margin-top:16px;
+}
+
+/* revision-27: manager feedback and iPhone layout */
+body { overflow-x:hidden; }
+.topic-row { gap:12px 0; }
+.topic-row span {
+  padding:0;
+  border:0;
+  border-radius:0;
+  color:rgba(20,17,15,.78);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+.topic-row span:not(:last-child)::after {
+  content:"/";
+  margin:0 13px;
+  color:var(--red);
+  opacity:.75;
+}
+.audience-summary,
+.audience-charts,
+.audience-summary article,
+.audience-charts article,
+.bar-row,
+.bar-row > div { min-width:0; }
+.stats-explainer {
+  max-width:580px;
+  color:rgba(255,255,255,.68);
+  font-size:13px;
+}
+.price-note {
+  width:fit-content;
+  max-width:100%;
+  line-height:1.35;
+  white-space:normal;
+}
+
+@media (max-width:620px) {
+  .topbar {
+    top:10px;
+    width:calc(100% - 20px);
+    padding:8px 9px;
+  }
+  .logo,
+  .mobile-menu summary {
+    width:36px;
+    height:36px;
+  }
+  .logo { font-size:19px; }
+  .mini-cta {
+    padding:8px 10px;
+    font-size:11px;
+  }
+  .manifesto,
+  .stats,
+  .audience,
+  .cases,
+  .formats { padding-inline:16px; }
+  .topic-row {
+    margin-top:48px;
+    padding-top:18px;
+  }
+  .topic-row span {
+    font-size:11px;
+    line-height:1.4;
+  }
+  .topic-row span:not(:last-child)::after { margin-inline:9px; }
+  .audience-summary article,
+  .audience-charts article {
+    padding:20px 16px;
+    border-radius:20px;
+  }
+  .audience-charts h3,
+  .gender-card h3 {
+    margin-bottom:24px;
+    font-size:46px;
+    line-height:1.05;
+  }
+  .bar-row,
+  .gender-card .bar-row {
+    grid-template-columns:64px minmax(0,1fr) 44px;
+    gap:6px;
+    font-size:11px;
+  }
+  .bar-row span {
+    min-width:0;
+    font-size:11px;
+    letter-spacing:0;
+  }
+  .bar-row b {
+    min-width:0;
+    font-size:11px;
+    white-space:nowrap;
+  }
+  .manager-stats article > small {
+    max-width:58%;
+    padding-right:6px;
+  }
+  .stats-explainer {
+    margin-bottom:0 !important;
+    font-size:12px;
+    line-height:1.45;
+  }
+  .format-list article,
+  .format-list article.special-format {
+    grid-template-columns:38px minmax(0,1fr);
+    gap:10px 12px;
+    padding:26px 0;
+  }
+  .format-list article > span { font-size:30px; }
+  .format-list article > h3 {
+    min-width:0;
+    font-size:24px;
+    line-height:1.08;
+  }
+  .format-list article > div { min-width:0; }
+  .price-note {
+    width:100%;
+    margin-top:36px;
+    padding:13px 14px;
+    font-size:10px;
+    overflow-wrap:anywhere;
+  }
 }
