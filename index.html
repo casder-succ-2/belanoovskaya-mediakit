@@ -14,18 +14,23 @@
   <body>
     <main>
       <header class="topbar">
-        <a class="logo" href="#top" aria-label="Наверх">💅</a>
+        <a class="nav-brand" href="#top" aria-label="Наверх">
+          <span class="logo"
+            ><img src="public/avatar.jpg" alt="Даша Белановская"
+          /></span>
+          <span class="nav-handle">@belanoovskaya</span>
+        </a>
         <nav aria-label="Основная навигация">
           <a href="#about">Обо мне</a><a href="#audience">Аудитория</a
           ><a href="#stats">Статистика</a><a href="#formats">Сотрудничество</a
           ><a href="#cases">Кейсы</a><a href="#contact">Мои соцсети</a>
         </nav>
         <a
-          class="mini-cta"
-          href="https://www.instagram.com/belanoovskaya/"
+          class="nav-project-cta"
+          href="https://ig.me/m/belanoovskaya"
           target="_blank"
           rel="noreferrer"
-          >Instagram ↗</a
+          >Обсудить проект</a
         >
         <details class="mobile-menu">
           <summary aria-label="Открыть меню">
@@ -148,7 +153,7 @@
           </p>
         </div>
         <div class="audience-summary">
-          <article><small>Подписчики</small><strong>9 378</strong></article>
+          <article><small>Подписчики</small><strong>9 387</strong></article>
           <article class="gender-card">
             <h3>Пол</h3>
             <div class="bar-row">
@@ -238,7 +243,7 @@
           <h2>Статистика</h2>
           <div class="stats-note">
             <p>
-              Instagram · последние 30 дней · актуализировано 18 августа 2026
+              Instagram · последние 30 дней · актуализировано 20 августа 2026
               года
             </p>
             <p class="stats-explainer">
@@ -249,11 +254,11 @@
         </div>
         <div class="manager-stats">
           <article>
-            <small>Просмотры за 30 дней</small><strong>1,38 млн</strong>
-            <p>60% — подписчики · 40% — новая аудитория</p>
+            <small>Просмотры за 30 дней</small><strong>1,60 млн</strong>
+            <p>53,8% — подписчики · 46,2% — новая аудитория</p>
           </article>
           <article>
-            <small>Посещения профиля</small><strong>23,8 тыс.</strong>
+            <small>Посещения профиля</small><strong>24,3 тыс.</strong>
           </article>
           <article>
             <a
@@ -774,7 +779,7 @@
                 <img src="public/cases/megatop.jpg" alt="" /><span>16</span>
               </div>
               <div class="case-body">
-                <p>Спецпроекты</p>
+                <p>Контент под ключ</p>
                 <h3>МЕГАТОП</h3>
                 <p class="case-task">
                   <strong>Задача:</strong>
@@ -858,5 +863,13 @@
         </div>
       </footer>
     </main>
+    <script>
+      const topbar = document.querySelector(".topbar");
+      const updateTopbar = () => {
+        topbar.classList.toggle("is-scrolled", window.scrollY > 80);
+      };
+      updateTopbar();
+      window.addEventListener("scroll", updateTopbar, { passive: true });
+    </script>
   </body>
 </html>
