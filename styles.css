@@ -985,7 +985,7 @@ body { overflow-x:hidden; }
 }
 .topbar.is-scrolled nav { gap:20px; }
 .hero h1 {
-  font-size:clamp(64px,7.6vw,126px);
+  font-size:clamp(60px,7vw,116px);
   letter-spacing:.025em;
 }
 
@@ -1017,4 +1017,14 @@ body { overflow-x:hidden; }
     font-size:9.8vw;
     letter-spacing:.018em;
   }
+}
+
+/* revision-29: keep the hero portrait large independently of the headline */
+.hero-visual img {
+  transform:scale(1.27);
+  transform-origin:center bottom;
+}
+
+@media (max-width:900px) {
+  .hero-visual img { transform:scale(1.1); }
 }
