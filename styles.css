@@ -701,6 +701,9 @@ body { overflow-x:hidden; }
   border-top:1px solid rgba(255,255,255,.28);
 }
 .instagram-social-stats { margin-top:38px; }
+.instagram-social-stats .social-platform-heading {
+  grid-template-columns:1fr auto;
+}
 .social-platform-heading {
   display:grid;
   grid-template-columns:minmax(220px,.7fr) minmax(280px,1fr) auto;
@@ -899,6 +902,7 @@ body { overflow-x:hidden; }
   }
   .secondary-social-stats { margin-top:54px; padding-top:24px; }
   .instagram-social-stats { margin-top:32px; }
+  .instagram-social-stats .social-platform-heading { grid-template-columns:1fr; }
   .social-platform-heading { grid-template-columns:1fr; gap:12px; }
   .social-platform-heading h3 { font-size:54px; }
   .social-platform-heading > p { font-size:13px; }
