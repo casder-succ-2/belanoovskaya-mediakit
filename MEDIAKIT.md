@@ -1,6 +1,6 @@
 # Медиакит Даши Белановской
 
-**@belanoovskaya — стильная айтишница и блогер**  
+**@belanoovskaya — стильная айтишница и блогер**<br>
 31 год · Минск, Беларусь
 
 [Онлайн-версия медиакита](https://belanoovskaya-mediakit.netlify.app/) · [Instagram](https://www.instagram.com/belanoovskaya/) · [Telegram](https://t.me/delonevshlyape) · [Threads](https://www.threads.com/@belanoovskaya)
